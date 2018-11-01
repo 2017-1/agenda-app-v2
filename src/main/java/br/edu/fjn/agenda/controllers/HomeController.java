@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package br.edu.fjn.agenda;
+package br.edu.fjn.agenda.controllers;
 
 import br.com.caelum.vraptor.Controller;
 import br.com.caelum.vraptor.Get;
@@ -17,7 +17,6 @@ public class HomeController {
     
     @Get("/")
     public void home(){
-        
-        System.out.println("Homeee aqui");
+
     }
 }
