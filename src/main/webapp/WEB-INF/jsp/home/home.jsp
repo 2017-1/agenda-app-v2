@@ -1,6 +1,6 @@
 <%-- 
-    Document   : index
-    Created on : Oct 29, 2018, 7:50:31 PM
+    Document   : home.jsp
+    Created on : Oct 31, 2018, 9:35:09 PM
     Author     : leonardo
 --%>
 
@@ -13,5 +13,6 @@
     </head>
     <body>
         <h1>Hello World!</h1>
+        HOME FROM VRaptor!
     </body>
 </html>
