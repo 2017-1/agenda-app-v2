@@ -31,8 +31,19 @@ public class ContactController {
     
     @Post("salvar")
     public void save(Contact contact){
-        result.include("contact", contact)
-              .redirectTo(this)
-              .formView();
+        result.include("contact", contact);
+        result.redirectTo(this).formView();
+              
     } 
+    
+    
+  
+    public void update(){}
+    
+    public void delete(){}
+    
+    public void listAll(){}
+    
+    public void listOneByCode(){}    
+
 }

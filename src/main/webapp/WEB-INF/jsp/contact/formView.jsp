@@ -13,8 +13,8 @@
     </head>
     <body>
         <h1>Novo Contato</h1>
-        ${contact}
-         <form action="contato/salvar" method="post">
+        ${contact.name}
+         <form action="${pageContext.request.contextPath}/contato/salvar" method="post">
             <div>
                 <label>Nome:</label>
                 <input type="text" name="contact.name"/>                
