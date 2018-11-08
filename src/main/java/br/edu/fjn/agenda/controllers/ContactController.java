@@ -26,11 +26,20 @@ public class ContactController {
     
     @Get("novo")
     public void formView(){
-      
+         /* se o user está logado (Session)?
+          * True -> Deixo ele acessar formView
+          * False -> Mando ele para loginView
+          * 
+          * */      
     }
     
     @Post("salvar")
     public void save(Contact contact){
+    	/* se o user está logado (Session)?
+         * True -> Deixo ele acessar formView
+         * False -> Mando ele para loginView
+         * 
+         * */
         result.include("contact", contact);
         result.redirectTo(this).formView();
               
