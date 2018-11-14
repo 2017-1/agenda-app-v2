@@ -36,12 +36,18 @@ public class LoginController {
     public void authenticate(String username, String password) {
         if (username.equalsIgnoreCase("joão")
                 && password.equalsIgnoreCase("123")) {       	
-            result.redirectTo(HomeController.class).home();
+ 
             userSession.setLogged(true);
+            result.redirectTo(HomeController.class).home();
+
         }
 
     }
 
+    @Get("sair")
     public void logout() {
+
+        userSession.setLogged(false);
+        result.redirectTo(this).loginView();
     }
 }
