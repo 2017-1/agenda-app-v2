@@ -8,3 +8,12 @@ and open the template in the editor.
     Author     : leonardo
 */
 
+.login-box {
+
+    border: 2px solid #ccc;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+
+
+}

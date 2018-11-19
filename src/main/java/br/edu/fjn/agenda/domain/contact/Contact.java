@@ -5,19 +5,25 @@
  */
 package br.edu.fjn.agenda.domain.contact;
 
+import java.util.UUID;
+
 /**
  *
  * @author leonardo
  */
 public class Contact {
     
+    private String code;
     private String name;
     private String phoneNumber;
+    private Address address;
 
     public Contact() {
+        this.code = UUID.randomUUID().toString();
     }
 
     public Contact(String name, String phoneNumber) {
+        this();
         this.name = name;
         this.phoneNumber = phoneNumber;
     }
@@ -36,6 +42,23 @@ public class Contact {
 
     public void setPhoneNumber(String phoneNumber) {
         this.phoneNumber = phoneNumber;
+    }
+
+    public String getCode() {
+        return code;
+    }
+
+    public void setCode(String code) {
+        this.code = code;
+    }
+    
+    
+    public Address getAddress() {
+        return address;
+    }
+
+    public void setAddress(Address address) {
+        this.address = address;
     }
     
     

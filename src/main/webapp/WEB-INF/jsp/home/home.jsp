@@ -8,11 +8,29 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <link rel="stylesheet" href="${pageContext.request.contextPath}/css/bootstrap.min.css"/>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>JSP Page</title>
+        <title>Página Inicial</title>
     </head>
     <body>
-        <h1>Hello World!</h1>
-        HOME FROM VRaptor!
-    </body>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="container">
+                <div className="navbar-header">
+                    <a href='/' class="navbar-brand">
+                        Gerenciador de Contatos
+                    </a>
+                </div>
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="${pageContext.request.contextPath}/contato/novo">Novo</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="${pageContext.request.contextPath}/contato/listar">Listar</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <div class="container">
+            Página Inicial
+        </div>
 </html>

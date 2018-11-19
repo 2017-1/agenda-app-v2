@@ -1,6 +1,6 @@
 <%-- 
-    Document   : formView
-    Created on : Nov 1, 2018, 7:28:21 PM
+    Document   : updateView
+    Created on : Nov 19, 2018, 7:33:17 PM
     Author     : leonardo
 --%>
 
@@ -10,7 +10,7 @@
     <head>
         <link rel="stylesheet" href="${pageContext.request.contextPath}/css/bootstrap.min.css"/>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>JSP Page</title>
+        <title>Atualizar contato</title>
     </head>
     <body>
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
@@ -33,10 +33,11 @@
         <div class="container">
             <div class="card mt-4" style="width: 50%; margin: auto;">
                 <h3 class="card-title mt-4 ml-3">
-                    Novo Contato
+                    Atualizar Contato
                 </h3>
                 <div class="card-body">
-                    <form action="${pageContext.request.contextPath}/contato/salvar" method="post">
+                    <form action="${pageContext.request.contextPath}/contato/atualizar" method="post">
+                        <input type="hidden" name="contact.code" value="${contact.code}">
                         <div class="form-group">
                             <label>Nome:</label>
                             <input class="form-control" type="text" name="contact.name"
@@ -62,7 +63,7 @@
                             <input class="form-control" type="text" name="contact.address.zipCode" 
                                    value="${contact.address.zipCode}"/>
                         </div>
-                        <button class="btn btn-primary" type="submit">Salvar</button>                
+                        <button class="btn btn-primary" type="submit">Atualizar</button>                
                     </form>
                 </div>
             </div>
