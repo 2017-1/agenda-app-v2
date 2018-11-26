@@ -12,6 +12,7 @@ import br.com.caelum.vraptor.Post;
 import br.com.caelum.vraptor.Result;
 import br.edu.fjn.agenda.components.ContactListDB;
 import br.edu.fjn.agenda.domain.contact.Contact;
+import java.util.List;
 import javax.inject.Inject;
 
 /**
@@ -43,7 +44,12 @@ public class ContactController {
               
     } 
     
-    
+    @Get("buscar")
+    public void find(String contactName){
+       List<Contact> contactList = contactListDB.findByName(contactName); 
+       result.include("contactList", contactList);
+       result.of(this).listView();
+    }
   
     @Post("atualizar")
     public void update(Contact contact){
@@ -52,7 +58,12 @@ public class ContactController {
     
     }
     
-    public void delete(){}
+    @Get("remover/{code}")
+    public void delete(String code){
+       contactListDB.remove(code);
+       result.redirectTo(this).listView();
+       
+    }
     
     @Get("listar")
     public void listView(){     

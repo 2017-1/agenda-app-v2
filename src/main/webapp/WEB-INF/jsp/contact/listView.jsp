@@ -32,6 +32,10 @@
             </div>
         </nav>
         <div class="container">
+            <form action="${pageContext.request.contextPath}/contato/buscar">
+                <input type="name" name="contactName">
+                <button type="submit">Buscar</button>
+            </form>
             <table class="table table-striped">
                 <thead>
                     <tr>

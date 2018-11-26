@@ -13,6 +13,7 @@ import javax.enterprise.context.ApplicationScoped;
 /**
  *
  * @author leonardo
+ * 
  */
 @ApplicationScoped
 public class ContactListDB {
@@ -53,6 +54,21 @@ public class ContactListDB {
                contactDB.set(position, contact);
             }
         }
+    }
+
+    public List<Contact> findByName(String name) {
+        List<Contact> contactList = new ArrayList<>();
+        for (Contact contactFromDB : contactDB) {
+            if (contactFromDB.getName().startsWith(name)){
+               contactList.add(contactFromDB);
+            }
+        }
+        return contactList;
+    }
+
+    public void remove(String code) {
+        Contact contact = findByCode(code);
+        contactDB.remove(contact);
     }
     
 }
